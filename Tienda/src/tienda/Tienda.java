@@ -4,12 +4,12 @@
  * and open the template in the editor.
  */
 package tienda;
-
+import java.util.Scanner;
 /**
  *
  * @author Alumno
  */
-enum seccion{hombre, mujer, niños, deporte, tecnologia, linea_blanca}
+enum Seccion{HOMBRE, MUJER, NIÑOS, DEPORTE, TECNOLOGIA, LINEA_BLANCA}
 
 public class Tienda {
 
@@ -17,7 +17,11 @@ public class Tienda {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Empleado e1 =  new Empleado(Jose, 28, 300000);
+        
+        
+        
+        
     }
     
 }

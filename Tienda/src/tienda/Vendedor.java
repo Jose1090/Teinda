@@ -12,7 +12,7 @@ package tienda;
 public class Vendedor extends Empleado {
     
     private int comision;
-    private seccion seccion;
+    private Seccion seccion;
     private int totalVentas;
     
     public Vendedor(String nombre, int edad, int sueldo){
@@ -20,11 +20,21 @@ public class Vendedor extends Empleado {
         
     }
     
-    public Vendedor(String nombre, int edad, int sueldo, int comision, seccion seccion){
+    public Vendedor(String nombre, int edad, int sueldo, int comision, Seccion seccion){
         super(nombre, edad, sueldo);
         this.comision = comision;
         this.seccion = seccion;
+        this.totalVentas=0;
   
+    }
+    public void setSeccion(Seccion seccion) {
+        this.seccion = seccion;
+    }
+    public void setComision(int comision) {
+        this.comision = comision;
+    }
+    public Seccion getSeccion() {
+        return seccion;
     }
     
     public int getTotalVentas(){

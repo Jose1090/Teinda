@@ -35,6 +35,11 @@ public abstract class Empleado {
         
     }
     public abstract int calculoSueldo();
+    
+    
+    public void aumentoSueldo(int aumento){
+        this.sueldo += aumento;
+    }
             
         
     

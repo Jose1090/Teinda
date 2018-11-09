@@ -11,33 +11,25 @@ package tienda;
  */
 public abstract class Empleado {
     private String nombre;
-    private String apellido;
     private int edad;
-    private String rut;
     private int sueldo;
     
-    public Empleado(){}
     
-    public Empleado(String nombre, String apellido, int edad, String rut, int sueldo){
+    
+    public Empleado(String nombre, int edad, int sueldo){
         this.nombre = nombre;
-        this.apellido = apellido;
         this.edad = edad;
-        this.rut = rut;
         this.sueldo = sueldo;
         
     }
     public String getNombre(){
         return nombre;
     }
-    public String getApellido(){
-        return apellido;
-    }
+    
     public int getEdad(){
         return edad;
     } 
-    public String getRut(){
-        return rut;
-    }
+   
     public int getSueldo(){
         return sueldo;
         

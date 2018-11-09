@@ -10,18 +10,45 @@ package tienda;
  * @author Alumno
  */
 public class Vendedor extends Empleado {
-    private int cod_vendedor;
+    
     private int comision;
     private seccion seccion;
-    private int ventas;
     private int totalVentas;
     
-    public Vendedor(int cod_vendedor, int comision, seccion seccion, int ventas,
-           int totalVentas){
-        super();
-       
-}
+    public Vendedor(String nombre, int edad, int sueldo){
+        super(nombre, edad, sueldo);
+        
+    }
+    
+    public Vendedor(String nombre, int edad, int sueldo, int comision, seccion seccion){
+        super(nombre, edad, sueldo);
+        this.comision = comision;
+        this.seccion = seccion;
   
+    }
+    
+    public int getTotalVentas(){
+        return  totalVentas;
+    }
+    @Override
+    public int calculoSueldo(){
+        int sueldo;
+        if(totalVentas > 100000){
+            sueldo = (int)(this.getSueldo()+(totalVentas*((float)comision/100)));
+        }else{
+            sueldo = (super.getSueldo());
+        }
+        return sueldo;
+    
+    }
+    /**calculo para ventas */
+    
+    
+    
+    
+    
+    
+   
     
     
     
